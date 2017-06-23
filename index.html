@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+
+	<script src="module.js"></script>
+	<script src="ctrl.js"></script>
+
+	<script src="todo/todo.module.js"></script>
+	<script src="todo/todo.states.js"></script>
+	<script src="todo/todo.ctrl.js"></script>
+	
+	<script src="notes/notes.module.js"></script>
+	<script src="notes/notes.states.js"></script>
+	<script src="notes/notes.ctrl.js"></script>
+	
+
+
+</head>
+
+<body ng-controller='baseCtrl'>
+	<a ui-sref='tasks'>Todos</a><br>
+	<a ui-sref='notes'>Notes</a>
+	<ui-view></ui-view>
+</body>
+
+</html>

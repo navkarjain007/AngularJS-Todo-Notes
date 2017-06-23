@@ -1,0 +1,9 @@
+<h1 style="text-align: center;">Add a Note</h1>
+<input ng-model="addMe"style="display: block;margin: 0 auto; padding: 5px;font-size: 15px; width: 300px">
+<button ng-click="addItem()">Add</button>
+<ul>
+	<li ng-repeat="x in notes">
+		{{x}}
+		<span ng-click="removeItem($index)">&times;</span>
+	</li>
+</ul>	

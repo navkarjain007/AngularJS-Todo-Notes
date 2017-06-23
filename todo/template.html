@@ -1,0 +1,26 @@
+<div>
+	<style type="text/css">
+		span.done-true{
+			color: gray;
+			font-style: italic;
+			text-decoration: line-through;
+		}
+	</style>
+
+	<h1 style="text-align: center;">Add a Task</h1>
+	<input ng-model="task" ng-keyup="searchEnter()" type="text" style="display: block;margin: 0 auto; padding: 5px;font-size: 15px; width: 300px">
+
+	<div id="taskToShow">
+		<ul>
+			<li ng-repeat="oneTask in tasks">
+				<span class="done-{{oneTask.status}}">
+					<input type="checkbox" ng-model="oneTask.status">
+					{{oneTask.taskMessage}}
+				</span>
+			</li>
+		</ul>
+	</div>
+	<button type="button" ng-click="remove()">Delete</button> <br>
+	<a ui-sref='notes'>add a note</a>
+	
+</div>
